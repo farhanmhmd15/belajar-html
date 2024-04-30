@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="css/hop.cssgit " />
-	<title>SUKSES</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulir</title>
 </head>
 <body>
-	<div class="fContainer">
-		<nav class="wrapper">
-			<div class="brand">
-				<div class="firstname">YOI.AN</div>
-				<div class="lastname">YOI</div>
-			</div>
-			<ul class="navigation">
-				<li><a href="//">HOME</a></li>
-				<li><a  href="//" class="active">SOSIAL</a></li>
-				<li><a href="//">MASSAGE</a></li>
-				<li><img src="assets/images/l.png"></li>
-			</ul>
-		</nav>
-	</div>
+<h2>Formulir Kirim Data</h2>
+<form id="myForm">
+	<label for="name">Nama:</label><br>
+	<input type="text" id="name" name="name"><br>
+	<label for="email">Email:</label><br>
+	<input type="email" id="email" name="email"><br><br>
+	<button type="button" onclick="submitForm()">Kirim</button>
+</form>
 
+<div id="result"></div>
+
+<script>
+	function submitForm() {
+		var name = document.getElementById("name").value;
+		var email = document.getElementById("email").value;
+
+		var resultDiv = document.getElementById("result");
+		resultDiv.innerHTML = "<p>Nama: " + name + "</p><p>Email: " + email + "</p>";
+	}
+</script>
 </body>
 </html>
